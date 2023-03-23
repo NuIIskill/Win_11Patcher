@@ -1,10 +1,10 @@
 ##########
 # Win10 Initial Setup Script
 # Author: Nullskill_0_0
-# Version: 0.1, Beta
+# Version: 1.1
 ##########
 
-set-executionpolicy remotesigned -Scope CurrentUser
+Set-ExecutionPolicy Unrestricted
 
 If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {
 	Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
