@@ -1,5 +1,5 @@
 ##########
-# Win10 Initial Setup Script
+# Win10 / 11 Initial Setup Script
 # Author: Nullskill_0_0
 # Version: 1.1
 ##########
@@ -91,6 +91,9 @@ If (!(Test-Path "HKCU:\Software\Microsoft\InputPersonalization\TrainedDataStore"
 	New-Item -Path "HKCU:\Software\Microsoft\InputPersonalization\TrainedDataStore" -Force | Out-Null
 }
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\InputPersonalization\TrainedDataStore" -Name "HarvestContacts" -Type DWord -Value 0
+
+# Uninstall Cortana
+Get-AppxPackage -allusers Microsoft.549981C3F5F10 | Remove-AppxPackage
 
 # Enable Cortana
 # Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Personalization\Settings" -Name "AcceptedPrivacyPolicy"
