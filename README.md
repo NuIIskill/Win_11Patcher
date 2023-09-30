@@ -1,2 +1,2 @@
 # Win_10/11 Debload Shellscript
-Designed for Debloat Virtual Machine especially for VM-Ware 
+Designed to run on Win10/11 machines 
